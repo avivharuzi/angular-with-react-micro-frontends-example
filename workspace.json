@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
+    "cart": "apps/cart",
+    "cart-e2e": "apps/cart-e2e",
     "products": "apps/products",
     "products-e2e": "apps/products-e2e",
     "shell": "apps/shell",
