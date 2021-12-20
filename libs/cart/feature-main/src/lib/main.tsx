@@ -9,32 +9,32 @@ import * as React from 'react';
 export class Main extends React.PureComponent {
   override state: { cartItems: CartItem[] } = { cartItems: [] };
 
-  // add = (text: string) => todosService.add(text);
-  //
-  // toggleTodo = (id: ID) => todosService.complete(id);
-  //
-  // deleteTodo = (id: ID) => todosService.delete(id);
-  //
-  // changeFilter = ({ target: { value } }) => {
-  //   todosService.updateFilter(value);
-  // };
-  //
+  removeCartItem = (id: number) => {
+    cartService.removeItem(id);
+  };
 
   override componentDidMount() {
-    // todosQuery.selectVisibleTodos$
-    //   .pipe(untilDestroyed(this))
-    //   .subscribe(todos => this.setState({ todos }));
-    console.log('mount');
     cartService.cartItems$.subscribe((cartItems) => {
-      console.log(cartItems);
+      this.setState({ cartItems });
     });
   }
 
   override render() {
+    const noCartItems = <p>No cart items</p>;
+
+    const cartItems = this.state.cartItems.map(({ id, product, amount }) => {
+      return (
+        <div>
+          <h3>{product.title}</h3>
+          <img height="100px" src={product.image} alt={product.title} />
+          <p>Amount: {amount}</p>
+          <button onClick={() => this.removeCartItem(id)}>Remove item</button>
+        </div>
+      );
+    });
+
     return (
-      <div>
-        <h1>Main</h1>
-      </div>
+      <div>{this.state.cartItems.length === 0 ? noCartItems : cartItems}</div>
     );
   }
 }
