@@ -3,6 +3,7 @@
   "projects": {
     "cart": "apps/cart",
     "cart-e2e": "apps/cart-e2e",
+    "cart-feature-main": "libs/cart/feature-main",
     "products": "apps/products",
     "products-e2e": "apps/products-e2e",
     "products-feature-main": "libs/products/feature-main",
