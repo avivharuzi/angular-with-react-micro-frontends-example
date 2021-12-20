@@ -26,15 +26,15 @@
     "@angular/language-service": "~13.1.0",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
-    "@nrwl/angular": "^13.3.9",
+    "@nrwl/angular": "13.3.8",
     "@nrwl/cli": "13.3.8",
-    "@nrwl/cypress": "13.3.9",
-    "@nrwl/eslint-plugin-nx": "13.3.9",
-    "@nrwl/jest": "13.3.9",
-    "@nrwl/linter": "13.3.9",
-    "@nrwl/react": "^13.3.9",
+    "@nrwl/cypress": "13.3.8",
+    "@nrwl/eslint-plugin-nx": "13.3.8",
+    "@nrwl/jest": "13.3.8",
+    "@nrwl/linter": "13.3.8",
+    "@nrwl/react": "13.3.8",
     "@nrwl/tao": "13.3.8",
-    "@nrwl/web": "13.3.9",
+    "@nrwl/web": "13.3.8",
     "@nrwl/workspace": "13.3.8",
     "@testing-library/react": "12.1.2",
     "@testing-library/react-hooks": "7.0.2",
@@ -64,11 +64,6 @@
     "ts-jest": "27.0.5",
     "typescript": "~4.4.3"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/git-cz"
-    }
-  },
   "dependencies": {
     "@angular-architects/module-federation": "^13.0.1",
     "@angular/animations": "~13.1.0",
@@ -87,5 +82,10 @@
     "rxjs": "~7.4.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/git-cz"
+    }
   }
 }
