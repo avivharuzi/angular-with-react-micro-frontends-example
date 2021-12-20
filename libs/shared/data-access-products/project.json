@@ -1,24 +1,21 @@
 {
-  "projectType": "library",
   "root": "libs/shared/data-access-products",
   "sourceRoot": "libs/shared/data-access-products/src",
-  "prefix": "shared",
+  "projectType": "library",
   "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/data-access-products/**/*.ts"]
+      }
+    },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/shared/data-access-products"],
       "options": {
         "jestConfig": "libs/shared/data-access-products/jest.config.js",
         "passWithNoTests": true
-      }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/shared/data-access-products/src/**/*.ts",
-          "libs/shared/data-access-products/src/**/*.html"
-        ]
       }
     }
   },

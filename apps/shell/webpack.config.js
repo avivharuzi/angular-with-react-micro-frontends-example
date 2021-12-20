@@ -21,8 +21,8 @@ sharedMappings.register(
   tsConfigPath,
   [
     /* mapped paths to share */
-    '@angular-with-react-micro-frontends-example/shared/data-access-cart',
     '@angular-with-react-micro-frontends-example/shared/data-access-products',
+    '@angular-with-react-micro-frontends-example/shared/data-access-cart',
   ],
   workspaceRootPath
 );
