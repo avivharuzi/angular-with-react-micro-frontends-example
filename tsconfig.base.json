@@ -27,6 +27,9 @@
     "noUnusedParameters": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
+      "@angular-with-react-micro-frontends-example/products/feature-main": [
+        "libs/products/feature-main/src/index.ts"
+      ],
       "@angular-with-react-micro-frontends-example/shared/data-access-cart": [
         "libs/shared/data-access-cart/src/index.ts"
       ],

@@ -1,13 +1,16 @@
-import { Product } from '../entities';
+import { delay, firstValueFrom, of } from 'rxjs';
+
 import {
   productsQuery,
   ProductsQuery,
   ProductsStore,
   productsStore,
 } from '../state';
+import { MOCK_PRODUCTS } from './mock-products';
 
 export class ProductsService {
   products$ = this.productsQuery.selectAll();
+  loading$ = this.productsQuery.selectLoading();
 
   constructor(
     private productsStore: ProductsStore,
@@ -16,12 +19,15 @@ export class ProductsService {
 
   async loadProducts(): Promise<void> {
     try {
-      const response = await fetch('https://fakestoreapi.com/products');
-      const products: Product[] = await response.json();
+      this.productsStore.setLoading(true);
+      const products = await firstValueFrom(
+        of(MOCK_PRODUCTS).pipe(delay(2000))
+      );
       this.productsStore.set(products);
     } catch (error) {
       this.productsStore.setError('Failed to fetch products.');
     }
+    this.productsStore.setLoading(false);
   }
 }
 

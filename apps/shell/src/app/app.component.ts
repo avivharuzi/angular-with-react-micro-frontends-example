@@ -8,12 +8,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class AppComponent {
   importFactory = () => import('cart/Component');
-
-  load() {
-    import('cart/Component')
-      .then((component) => {
-        console.log(component);
-      })
-      .catch(console.log);
-  }
 }

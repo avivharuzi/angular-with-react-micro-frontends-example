@@ -1,15 +1,5 @@
-<router-outlet></router-outlet>
+<shared-react-container
+  [importFactory]="importFactory"
+></shared-react-container>
 
-<button (click)="load()">load</button>
-<shared-react-container
-  [importFactory]="importFactory"
-></shared-react-container>
-<shared-react-container
-  [importFactory]="importFactory"
-></shared-react-container>
-<shared-react-container
-  [importFactory]="importFactory"
-></shared-react-container>
-<shared-react-container
-  [importFactory]="importFactory"
-></shared-react-container>
+<router-outlet></router-outlet>

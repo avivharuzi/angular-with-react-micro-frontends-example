@@ -2,20 +2,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
-import { RemoteEntryComponent } from './entry.component';
-
 @NgModule({
-  declarations: [RemoteEntryComponent],
   imports: [
     BrowserModule,
     RouterModule.forChild([
       {
         path: '',
-        component: RemoteEntryComponent,
+        pathMatch: 'full',
+        loadChildren: () =>
+          // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
+          import(
+            '@angular-with-react-micro-frontends-example/products/feature-main'
+          ).then(({ ProductsFeatureMainModule }) => ProductsFeatureMainModule),
       },
     ]),
   ],
-  providers: [],
-  exports: [RemoteEntryComponent],
 })
 export class RemoteEntryModule {}

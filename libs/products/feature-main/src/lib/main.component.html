@@ -1,0 +1,13 @@
+<ng-container>
+  <ng-container *ngIf="loading$ | async as loading">
+    <p>Loading products...</p>
+  </ng-container>
+  <ng-container *ngIf="products$ | async as products">
+    <ng-container *ngIf="products.length > 0">
+      <ng-container *ngFor="let product of products">
+        <h2>{{ product.title }}</h2>
+        <button (click)="addItem(product)">Add to cart</button>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</ng-container>
