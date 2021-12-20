@@ -56,6 +56,29 @@
         "style": "scss",
         "linter": "eslint"
       }
+    },
+    "@e-square/nx-ddd": {
+      "library": {
+        "sharedDomain": "shared",
+        "domainTagName": "scope",
+        "angular": {
+          "prefix": "",
+          "flat": true,
+          "style": "scss",
+          "changeDetection": "OnPush",
+          "createStories": false,
+          "unitTestRunner": "jest"
+        },
+        "react": {
+          "flat": true,
+          "style": "scss",
+          "pascalCaseFiles": false,
+          "pascalCaseDirectory": false,
+          "classComponent": false,
+          "createStories": false,
+          "unitTestRunner": "jest"
+        }
+      }
     }
   },
   "defaultProject": "shell"
