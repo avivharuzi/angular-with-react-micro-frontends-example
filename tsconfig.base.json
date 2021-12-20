@@ -32,6 +32,9 @@
       ],
       "@angular-with-react-micro-frontends-example/shared/data-access-products": [
         "libs/shared/data-access-products/src/index.ts"
+      ],
+      "@angular-with-react-micro-frontends-example/shared/ui-react-container": [
+        "libs/shared/ui-react-container/src/index.ts"
       ]
     }
   },

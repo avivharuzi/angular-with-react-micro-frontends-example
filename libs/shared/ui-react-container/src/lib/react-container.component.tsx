@@ -9,7 +9,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 @Component({
-  selector: 'shell-react-container[importFactory]',
+  selector: 'shared-react-container[importFactory]',
   templateUrl: './react-container.component.html',
   styleUrls: ['./react-container.component.scss'],
 })
