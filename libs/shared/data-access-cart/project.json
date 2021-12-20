@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/data-access-cart",
+  "sourceRoot": "libs/shared/data-access-cart/src",
+  "prefix": "shared",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/data-access-cart"],
+      "options": {
+        "jestConfig": "libs/shared/data-access-cart/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/data-access-cart/src/**/*.ts",
+          "libs/shared/data-access-cart/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:shared", "type:data-access"]
+}

@@ -5,6 +5,7 @@
     "cart-e2e": "apps/cart-e2e",
     "products": "apps/products",
     "products-e2e": "apps/products-e2e",
+    "shared-data-access-cart": "libs/shared/data-access-cart",
     "shared-data-access-products": "libs/shared/data-access-products",
     "shell": "apps/shell",
     "shell-e2e": "apps/shell-e2e"
