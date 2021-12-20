@@ -43,7 +43,7 @@
         "buildTarget": "cart:build",
         "hmr": true,
         "port": 4400,
-        "publicHost": "http://localhost:4300"
+        "publicHost": "http://localhost:4400"
       },
       "configurations": {
         "production": {
