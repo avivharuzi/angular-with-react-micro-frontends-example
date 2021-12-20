@@ -26,7 +26,11 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "forceConsistentCasingInFileNames": true,
-    "paths": {}
+    "paths": {
+      "@angular-with-react-micro-frontends-example/shared/data-access-products": [
+        "libs/shared/data-access-products/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

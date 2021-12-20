@@ -22,6 +22,7 @@ sharedMappings.register(
   tsConfigPath,
   [
     /* mapped paths to share */
+    '@angular-with-react-micro-frontends-example/shared/data-access-products',
   ],
   workspaceRootPath
 );

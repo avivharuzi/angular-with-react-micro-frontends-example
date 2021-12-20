@@ -1,3 +1,4 @@
+import { random } from '@angular-with-react-micro-frontends-example/shared/data-access-products';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
@@ -7,6 +8,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
+  rdm = random;
+
   importFactory = () => import('cart/Component');
 
   load() {
