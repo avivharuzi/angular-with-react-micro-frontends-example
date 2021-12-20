@@ -10,7 +10,7 @@ export class CartService {
 
   addItem(product: Product): void {
     const id = product.id;
-    const cartItem: CartItem = {
+    let cartItem: CartItem = {
       id,
       product,
       amount: 1,
@@ -18,7 +18,10 @@ export class CartService {
 
     const existingCartItem = this.cartQuery.getEntity(id);
     if (existingCartItem) {
-      cartItem.amount = existingCartItem.amount++;
+      cartItem = {
+        ...existingCartItem,
+        amount: existingCartItem.amount + 1,
+      };
     }
 
     this.cartStore.upsert(id, cartItem);
