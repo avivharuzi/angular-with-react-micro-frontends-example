@@ -6,4 +6,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {}
+export class AppComponent {
+  importFactory = () => import('cart/Component');
+
+  load() {
+    import('cart/Component')
+      .then((component) => {
+        console.log(component);
+      })
+      .catch(console.log);
+  }
+}

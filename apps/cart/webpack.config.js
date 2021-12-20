@@ -52,7 +52,7 @@ module.exports = (config) => {
       library: { type: 'var', name: 'cart' },
       filename: 'remoteEntry.js',
       exposes: {
-        RemoteEntry: 'apps/cart/src/app/remote-entry.tsx',
+        './Component': 'apps/cart/src/app/remote-entry.tsx',
       },
       shared: {
         react: { singleton: true, strictVersion: true },

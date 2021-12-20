@@ -46,6 +46,7 @@ module.exports = {
     new ModuleFederationPlugin({
       remotes: {
         products: 'products@http://localhost:4300/remoteEntry.js',
+        cart: 'cart@http://localhost:4400/remoteEntry.js',
       },
       shared: {
         '@angular/core': { singleton: true, strictVersion: true },
