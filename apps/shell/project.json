@@ -114,6 +114,28 @@
           "nx serve shell"
         ]
       }
+    },
+    "build-mfe": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "nx build header",
+          "nx build cart",
+          "nx build products",
+          "nx build shell"
+        ]
+      }
+    },
+    "serve-build-mfe": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "http-server --cors -p 4200 -c-1 dist/apps/shell --proxy http://localhost:4200?",
+          "http-server --cors -p 4300 -c-1 dist/apps/products --proxy http://localhost:4300?",
+          "http-server --cors -p 4400 -c-1 dist/apps/cart --proxy http://localhost:4400?",
+          "http-server --cors -p 4500 -c-1 dist/apps/header --proxy http://localhost:4500?"
+        ]
+      }
     }
   },
   "tags": ["type:app"]
