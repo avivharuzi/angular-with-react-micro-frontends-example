@@ -30,8 +30,14 @@
       "@angular-with-react-micro-frontends-example/cart/feature-main": [
         "libs/cart/feature-main/src/index.ts"
       ],
+      "@angular-with-react-micro-frontends-example/cart/ui-item": [
+        "libs/cart/ui-item/src/index.ts"
+      ],
       "@angular-with-react-micro-frontends-example/products/feature-main": [
         "libs/products/feature-main/src/index.ts"
+      ],
+      "@angular-with-react-micro-frontends-example/products/ui-card": [
+        "libs/products/ui-card/src/index.ts"
       ],
       "@angular-with-react-micro-frontends-example/shared/data-access-cart": [
         "libs/shared/data-access-cart/src/index.ts"

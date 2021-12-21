@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/products/ui-card",
+  "sourceRoot": "libs/products/ui-card/src",
+  "prefix": "products",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/products/ui-card"],
+      "options": {
+        "jestConfig": "libs/products/ui-card/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/products/ui-card/src/**/*.ts",
+          "libs/products/ui-card/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:products", "type:ui"]
+}

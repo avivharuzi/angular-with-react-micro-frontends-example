@@ -30,7 +30,9 @@ sharedMappings.register(
 
 module.exports = (config) => {
   config = nrwlConfig(config);
+
   config.output = {
+    ...config.output,
     uniqueName: 'cart',
     publicPath: 'auto',
     scriptType: 'text/javascript',

@@ -1,0 +1,23 @@
+{
+  "root": "libs/cart/ui-item",
+  "sourceRoot": "libs/cart/ui-item/src",
+  "projectType": "library",
+  "tags": ["scope:cart", "type:ui"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/cart/ui-item/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/cart/ui-item"],
+      "options": {
+        "jestConfig": "libs/cart/ui-item/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

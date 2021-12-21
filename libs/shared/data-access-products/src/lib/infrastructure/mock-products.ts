@@ -16,7 +16,7 @@ export const MOCK_PRODUCTS: Product[] = [
   },
   {
     id: 2,
-    title: 'Mens Casual Premium Slim Fit T-Shirts ',
+    title: 'Mens Casual Premium Slim Fit T-Shirts',
     price: 22.3,
     description:
       'Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.',
@@ -70,7 +70,7 @@ export const MOCK_PRODUCTS: Product[] = [
   },
   {
     id: 6,
-    title: 'Solid Gold Petite Micropave ',
+    title: 'Solid Gold Petite Micropave',
     price: 168,
     description:
       'Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.',
@@ -109,7 +109,7 @@ export const MOCK_PRODUCTS: Product[] = [
   },
   {
     id: 9,
-    title: 'WD 2TB Elements Portable External Hard Drive - USB 3.0 ',
+    title: 'WD 2TB Elements Portable External Hard Drive - USB 3.0',
     price: 64,
     description:
       'USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system',
@@ -230,7 +230,7 @@ export const MOCK_PRODUCTS: Product[] = [
   },
   {
     id: 18,
-    title: "MBJ Women's Solid Short Sleeve Boat Neck V ",
+    title: "MBJ Women's Solid Short Sleeve Boat Neck V",
     price: 9.85,
     description:
       '95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem',

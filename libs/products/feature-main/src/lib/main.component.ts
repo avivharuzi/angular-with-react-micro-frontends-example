@@ -1,9 +1,10 @@
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+
 import { cartService } from '@angular-with-react-micro-frontends-example/shared/data-access-cart';
 import {
   Product,
   productsService,
 } from '@angular-with-react-micro-frontends-example/shared/data-access-products';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'products-main',
@@ -12,7 +13,6 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MainComponent implements OnInit {
-  loading$ = productsService.loading$;
   products$ = productsService.products$;
 
   ngOnInit(): void {

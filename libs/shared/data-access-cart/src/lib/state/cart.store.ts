@@ -4,7 +4,7 @@ import { CartItem } from '../entities';
 
 export type CartState = EntityState<CartItem>;
 
-@StoreConfig({ name: 'products' })
+@StoreConfig({ name: 'cart' })
 export class CartStore extends EntityStore<CartState, CartItem> {
   constructor() {
     super();

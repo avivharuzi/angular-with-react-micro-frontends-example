@@ -1,0 +1,10 @@
+<div class="card shadow h-100 p-2">
+  <img class="card-img-top rounded h-100" [src]="image" [alt]="title" />
+  <div class="card-body text-center">
+    <h6 class="text-truncate">{{ title }}</h6>
+    <p class="text-muted">{{ subTitle }}</p>
+    <button class="btn btn-primary" (click)="actionClicked.emit()">
+      {{ actionTitle }}
+    </button>
+  </div>
+</div>

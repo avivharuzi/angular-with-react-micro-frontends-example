@@ -1,6 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import styles from './app.module.scss';
+import './app.module.scss';
+
 import RemoteEntry from './remote-entry';
 
 export function App() {

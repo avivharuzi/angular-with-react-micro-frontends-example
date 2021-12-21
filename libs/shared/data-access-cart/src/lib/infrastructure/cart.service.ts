@@ -13,14 +13,14 @@ export class CartService {
     let cartItem: CartItem = {
       id,
       product,
-      amount: 1,
+      quantity: 1,
     };
 
     const existingCartItem = this.cartQuery.getEntity(id);
     if (existingCartItem) {
       cartItem = {
         ...existingCartItem,
-        amount: existingCartItem.amount + 1,
+        quantity: existingCartItem.quantity + 1,
       };
     }
 

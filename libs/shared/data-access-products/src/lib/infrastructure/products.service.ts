@@ -10,7 +10,6 @@ import { MOCK_PRODUCTS } from './mock-products';
 
 export class ProductsService {
   products$ = this.productsQuery.selectAll();
-  loading$ = this.productsQuery.selectLoading();
 
   constructor(
     private productsStore: ProductsStore,
@@ -19,15 +18,11 @@ export class ProductsService {
 
   async loadProducts(): Promise<void> {
     try {
-      this.productsStore.setLoading(true);
-      const products = await firstValueFrom(
-        of(MOCK_PRODUCTS).pipe(delay(2000))
-      );
+      const products = await firstValueFrom(of(MOCK_PRODUCTS).pipe(delay(400)));
       this.productsStore.set(products);
     } catch (error) {
       this.productsStore.setError('Failed to fetch products.');
     }
-    this.productsStore.setLoading(false);
   }
 }
 

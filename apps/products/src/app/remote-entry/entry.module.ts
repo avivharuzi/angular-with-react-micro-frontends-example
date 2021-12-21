@@ -10,7 +10,6 @@ import { RouterModule } from '@angular/router';
         path: '',
         pathMatch: 'full',
         loadChildren: () =>
-          // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
           import(
             '@angular-with-react-micro-frontends-example/products/feature-main'
           ).then(({ ProductsFeatureMainModule }) => ProductsFeatureMainModule),
