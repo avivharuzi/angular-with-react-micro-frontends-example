@@ -10,6 +10,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'cart',
+    loadChildren: () =>
+      import('./cart-remote/cart-remote.module').then(
+        ({ CartRemoteModule }) => CartRemoteModule
+      ),
+  },
+  {
     path: '**',
     redirectTo: 'products',
   },
