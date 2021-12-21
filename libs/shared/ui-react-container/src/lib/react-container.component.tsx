@@ -13,17 +13,32 @@ import * as ReactDOM from 'react-dom';
   templateUrl: './react-container.component.html',
   styleUrls: ['./react-container.component.scss'],
 })
-export class ReactContainerComponent implements AfterViewInit {
+export class ReactContainerComponent<Props extends Record<string, unknown>>
+  implements AfterViewInit
+{
   @Input() importFactory!: () => Promise<{ default: React.ComponentType }>;
 
-  @ViewChild('reactContainer') private reactContainer: ElementRef | null = null;
-
-  ngAfterViewInit(): void {
+  @Input()
+  get props(): Partial<Props> {
+    return this._props;
+  }
+  set props(props: Partial<Props>) {
+    this._props = props;
     this.renderComponent();
   }
 
-  renderComponent(): void {
-    if (!this.reactContainer?.nativeElement) {
+  @ViewChild('reactContainer') private reactContainer: ElementRef | null = null;
+
+  private _props: Partial<Props> = {};
+  private isAfterViewInit = false;
+
+  ngAfterViewInit(): void {
+    this.isAfterViewInit = true;
+    this.renderComponent();
+  }
+
+  private renderComponent(): void {
+    if (!this.isAfterViewInit || !this.reactContainer?.nativeElement) {
       return;
     }
 
@@ -32,7 +47,7 @@ export class ReactContainerComponent implements AfterViewInit {
 
     ReactDOM.render(
       <React.Suspense fallback="Loading...">
-        <Component />
+        <Component {...this.props} />
       </React.Suspense>,
       rootElement
     );
