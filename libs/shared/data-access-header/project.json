@@ -1,0 +1,23 @@
+{
+  "root": "libs/shared/data-access-header",
+  "sourceRoot": "libs/shared/data-access-header/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/data-access-header/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/data-access-header"],
+      "options": {
+        "jestConfig": "libs/shared/data-access-header/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:shared", "type:data-access"]
+}

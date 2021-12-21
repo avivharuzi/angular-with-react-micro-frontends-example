@@ -23,6 +23,7 @@ sharedMappings.register(
     /* mapped paths to share */
     '@angular-with-react-micro-frontends-example/shared/data-access-products',
     '@angular-with-react-micro-frontends-example/shared/data-access-cart',
+    '@angular-with-react-micro-frontends-example/shared/data-access-header',
   ],
   workspaceRootPath
 );
@@ -49,6 +50,7 @@ module.exports = {
       remotes: {
         products: 'products@http://localhost:4300/remoteEntry.js',
         cart: 'cart@http://localhost:4400/remoteEntry.js',
+        header: 'header@http://localhost:4500/remoteEntry.js',
       },
       shared: {
         '@angular/core': { singleton: true, strictVersion: true },

@@ -46,7 +46,7 @@ export class ReactContainerComponent<Props extends Record<string, unknown>>
     const Component = React.lazy(this.importFactory);
 
     ReactDOM.render(
-      <React.Suspense fallback="Loading...">
+      <React.Suspense fallback="">
         <Component {...this.props} />
       </React.Suspense>,
       rootElement

@@ -52,6 +52,10 @@
               {
                 "sourceTag": "scope:cart",
                 "onlyDependOnLibsWithTags": ["scope:cart", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:header",
+                "onlyDependOnLibsWithTags": ["scope:header", "scope:shared"]
               }
             ]
           }

@@ -9,8 +9,12 @@ import {
 } from '@angular-with-react-micro-frontends-example/shared/data-access-cart';
 import Item from '@angular-with-react-micro-frontends-example/cart/ui-item';
 
+interface MainState {
+  cartItems: CartItem[];
+}
+
 export class Main extends React.PureComponent {
-  override state: { cartItems: CartItem[] } = { cartItems: [] };
+  override state: MainState = { cartItems: [] };
 
   private cartItemsSubscription: Subscription | null = null;
 

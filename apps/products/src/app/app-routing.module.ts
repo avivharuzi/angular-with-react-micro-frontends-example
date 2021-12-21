@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
     loadChildren: () =>
       import('./remote-entry/entry.module').then(
         ({ RemoteEntryModule }) => RemoteEntryModule

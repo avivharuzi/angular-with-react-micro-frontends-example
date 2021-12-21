@@ -1,3 +1,5 @@
+import { map } from 'rxjs';
+
 import { Product } from '@angular-with-react-micro-frontends-example/shared/data-access-products';
 
 import { CartItem } from '../entities';
@@ -5,6 +7,14 @@ import { CartQuery, cartQuery, CartStore, cartStore } from '../state';
 
 export class CartService {
   cartItems$ = this.cartQuery.selectAll();
+
+  cartTotalQuantity$ = this.cartQuery.selectAll().pipe(
+    map((cartItems) => {
+      return cartItems.reduce((previousValue, cartItem) => {
+        return previousValue + cartItem.quantity;
+      }, 0);
+    })
+  );
 
   constructor(private cartStore: CartStore, private cartQuery: CartQuery) {}
 

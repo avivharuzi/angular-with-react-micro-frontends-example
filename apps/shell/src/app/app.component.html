@@ -1,53 +1,7 @@
-<nav class="navbar navbar-light bg-light shadow-sm sticky-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" routerLink="/">
-      <img
-        src="assets/logos/angular.svg"
-        alt="Angular"
-        width="30px"
-        height="30px"
-        class="d-inline-block"
-      />
-      <span class="mx-2">+</span>
-      <img
-        src="assets/logos/react.svg"
-        alt="React"
-        width="30px"
-        height="30px"
-        class="d-inline-block"
-      />
-      <span class="d-inline-block ms-3">Micro Frontends</span>
-    </a>
-    <ul
-      class="ms-2 navbar-nav flex-row flex-grow-1 justify-content-between align-items-center"
-    >
-      <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" routerLink="/products"
-          >Products</a
-        >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" routerLink="/cart">
-          <span class="position-relative">
-            <img
-              alt=""
-              width="30px"
-              height="30px"
-              src="assets/icons/cart.svg"
-            />
-            <span
-              class="position-absolute bottom-0 start-100 translate-middle badge rounded-pill bg-danger"
-            >
-              5
-              <span class="visually-hidden">cart items</span>
-            </span>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
+<shared-react-container
+  [props]="headerProps"
+  [importFactory]="headerImportFactory"
+></shared-react-container>
 <div class="container py-5">
   <router-outlet></router-outlet>
 </div>

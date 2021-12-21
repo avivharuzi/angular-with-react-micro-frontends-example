@@ -33,6 +33,9 @@
       "@angular-with-react-micro-frontends-example/cart/ui-item": [
         "libs/cart/ui-item/src/index.ts"
       ],
+      "@angular-with-react-micro-frontends-example/header/feature-main": [
+        "libs/header/feature-main/src/index.ts"
+      ],
       "@angular-with-react-micro-frontends-example/products/feature-main": [
         "libs/products/feature-main/src/index.ts"
       ],
@@ -41,6 +44,9 @@
       ],
       "@angular-with-react-micro-frontends-example/shared/data-access-cart": [
         "libs/shared/data-access-cart/src/index.ts"
+      ],
+      "@angular-with-react-micro-frontends-example/shared/data-access-header": [
+        "libs/shared/data-access-header/src/index.ts"
       ],
       "@angular-with-react-micro-frontends-example/shared/data-access-products": [
         "libs/shared/data-access-products/src/index.ts"

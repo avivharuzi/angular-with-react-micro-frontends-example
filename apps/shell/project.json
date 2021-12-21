@@ -107,7 +107,12 @@
     "serve-mfe": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "commands": ["nx serve cart", "nx serve products", "nx serve shell"]
+        "commands": [
+          "nx serve header",
+          "nx serve cart",
+          "nx serve products",
+          "nx serve shell"
+        ]
       }
     }
   },
