@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   Input,
@@ -12,6 +13,7 @@ import * as ReactDOM from 'react-dom';
   selector: 'shared-react-container[importFactory]',
   templateUrl: './react-container.component.html',
   styleUrls: ['./react-container.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ReactContainerComponent<Props extends Record<string, unknown>>
   implements AfterViewInit
