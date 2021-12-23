@@ -1,4 +1,4 @@
-import { delay, firstValueFrom, of } from 'rxjs';
+import { delay, of } from 'rxjs';
 
 import {
   productsQuery,
@@ -16,13 +16,13 @@ export class ProductsService {
     private productsQuery: ProductsQuery
   ) {}
 
-  async loadProducts(): Promise<void> {
-    try {
-      const products = await firstValueFrom(of(MOCK_PRODUCTS).pipe(delay(400)));
-      this.productsStore.set(products);
-    } catch (error) {
-      this.productsStore.setError('Failed to fetch products.');
-    }
+  loadProducts(): void {
+    of(MOCK_PRODUCTS)
+      .pipe(delay(400))
+      .subscribe({
+        next: (products) => this.productsStore.set(products),
+        error: () => this.productsStore.setError('Failed to fetch products.'),
+      });
   }
 }
 

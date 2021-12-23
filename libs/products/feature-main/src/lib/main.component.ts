@@ -16,7 +16,7 @@ export class MainComponent implements OnInit {
   products$ = productsService.products$;
 
   ngOnInit(): void {
-    productsService.loadProducts().then();
+    productsService.loadProducts();
   }
 
   addItem(product: Product): void {

@@ -1,5 +1,5 @@
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
-const nrwlConfig = require('@nrwl/react/plugins/webpack');
+const getNrwlReactWebpackConfig = require('@nrwl/react/plugins/webpack');
 const mf = require('@angular-architects/module-federation/webpack');
 const path = require('path');
 
@@ -30,31 +30,30 @@ sharedMappings.register(
 );
 
 module.exports = (config) => {
-  config = nrwlConfig(config);
+  const nrwlReactWebpackConfig = getNrwlReactWebpackConfig(config);
 
-  config.output = {
-    ...config.output,
+  nrwlReactWebpackConfig.output = {
+    ...nrwlReactWebpackConfig.output,
     uniqueName: 'cart',
     publicPath: 'auto',
     scriptType: 'text/javascript',
   };
 
-  config.optimization = {
-    ...config.optimization,
+  nrwlReactWebpackConfig.optimization = {
+    ...nrwlReactWebpackConfig.optimization,
     runtimeChunk: false,
   };
 
-  config.resolve = {
-    ...config.resolve,
+  nrwlReactWebpackConfig.resolve = {
+    ...nrwlReactWebpackConfig.resolve,
     alias: {
       ...sharedMappings.getAliases(),
     },
   };
 
-  config.plugins.push(
+  nrwlReactWebpackConfig.plugins.push(
     new ModuleFederationPlugin({
       name: 'cart',
-      library: { type: 'var', name: 'cart' },
       filename: 'remoteEntry.js',
       exposes: {
         './Component': 'apps/cart/src/app/remote-entry.tsx',
@@ -68,5 +67,5 @@ module.exports = (config) => {
     sharedMappings.getPlugin()
   );
 
-  return config;
+  return nrwlReactWebpackConfig;
 };

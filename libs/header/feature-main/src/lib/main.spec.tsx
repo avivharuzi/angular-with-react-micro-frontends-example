@@ -4,7 +4,13 @@ import Main from './main';
 
 describe('Main', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Main />);
+    const { baseElement } = render(
+      <Main
+        linkClicked={() => {
+          return;
+        }}
+      />
+    );
     expect(baseElement).toBeTruthy();
   });
 });
